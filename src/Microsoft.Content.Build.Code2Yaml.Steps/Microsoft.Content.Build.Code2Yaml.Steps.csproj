@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Microsoft.Content.Build.Code2Yaml.Steps</RootNamespace>
     <AssemblyName>Microsoft.Content.Build.Code2Yaml.Steps</AssemblyName>
-    <TargetFramework>net462</TargetFramework>
+    <TargetFramework>net472</TargetFramework>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <ItemGroup>

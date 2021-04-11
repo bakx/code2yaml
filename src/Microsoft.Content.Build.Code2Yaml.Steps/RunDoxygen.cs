@@ -1,4 +1,6 @@
-﻿namespace Microsoft.Content.Build.Code2Yaml.Steps
+﻿using System.Collections.Generic;
+
+namespace Microsoft.Content.Build.Code2Yaml.Steps
 {
     using System;
     using System.Diagnostics;
@@ -114,11 +116,19 @@
                 content[Constants.Doxyfile.INPUT] = (from i in config.InputPaths
                                                      select PathUtility.MakeRelativePath(Environment.CurrentDirectory, Path.GetFullPath(i))).ToList();
                 content[Constants.Doxyfile.OUTPUT_DIRECTORY] = PathUtility.MakeRelativePath(Environment.CurrentDirectory, Path.GetFullPath(intermediateFolder));
+                
                 if (config.ExcludePaths != null)
                 {
                     content[Constants.Doxyfile.EXCLUDE] = (from e in config.ExcludePaths
                                                            select PathUtility.MakeRelativePath(Environment.CurrentDirectory, Path.GetFullPath(e))).ToList();
                 }
+
+                if (config.ExcludePatterns != null)
+                {
+	                content[Constants.Doxyfile.EXCLUDE_PATTERNS] = config.ExcludePatterns.ToList();
+                }
+
+                content["CPP_CLI_SUPPORT"] = "YES";
 
                 writer.Write(content);
             }

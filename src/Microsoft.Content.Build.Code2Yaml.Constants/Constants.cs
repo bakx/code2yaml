@@ -5,6 +5,7 @@
         public const string InputPaths = "input_paths";
         public const string OutputPath = "output_path";
         public const string ExcludePaths = "exclude_paths";
+        public const string ExcludePatterns = "exclude_patterns";
         public const string Language = "language";
         public const string ServiceMapping = "service_mapping";
         public const string GenerateTocMDFile = "generate_toc_md";
@@ -45,6 +46,7 @@
             public const string INPUT = "INPUT";
             public const string OUTPUT_DIRECTORY = "OUTPUT_DIRECTORY";
             public const string EXCLUDE = "EXCLUDE";
+            public const string EXCLUDE_PATTERNS = "EXCLUDE_PATTERNS";
         }
 
         public static class ServiceMappingConfig

@@ -24,6 +24,9 @@
         [JsonProperty(Constants.ExcludePaths)]
         public List<string> ExcludePaths { get; set; }
 
+        [JsonProperty(Constants.ExcludePatterns)]
+        public List<string> ExcludePatterns { get; set; }
+
         [JsonProperty(Constants.ServiceMapping)]
         public ServiceMappingConfig ServiceMappingConfig { get; set; }
 
